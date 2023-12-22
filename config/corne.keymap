@@ -25,11 +25,11 @@
                 tapping-term-ms = <200>;
                 bindings = <&kp G>, <&kp LG(G)>, <&kp LG(LS(G))>;
                 };
-                sav: tap_dance_1 {
+                auto: tap_dance_mod_tap_0 {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
-                bindings = <&mt S LG(S)>, <&kp LG(S)>;
+                bindings = <&mt LSHFT A>, <&kp LS(A)>;
                 };
                 und: tap_dance_mod_tap_1 {
                 compatible = "zmk,behavior-tap-dance";
