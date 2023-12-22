@@ -31,12 +31,6 @@
                 tapping-term-ms = <200>;
                 bindings = <&mt S LG(S)>, <&kp LG(S)>;
                 };
-                auto: tap_dance_mod_tap_0 {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&mt LSHFT A>, <&kp LS(A)>;
-                };
                 und: tap_dance_mod_tap_1 {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
@@ -128,7 +122,7 @@
                         bindings = <
                         &kp LALT    &none           &kp UP_ARROW    &none            &kp BACKSPACE        &kp K_MUTE         &kp C_VOLUME_DOWN &kp C_VOLUME_UP    &none            &kp BACKSPACE   
                         &kp LSHFT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ESCAPE           &none              &none             &none              &none            &none  
-                        &kp LCTRL   &none           &none           &none            &TAB               &none              &none             &none              &none            &none  
+                        &kp LCTRL   &none           &none           &none            &kp TAB               &none              &none             &none              &none            &none  
                                                     &trans          &trans           &trans               &trans             &trans            &trans
                         >;
                 };
