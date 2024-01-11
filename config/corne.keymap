@@ -25,18 +25,6 @@
                 tapping-term-ms = <200>;
                 bindings = <&mt LSHFT A>, <&kp LS(A)>;
                 };
-                und: tap_dance_mod_tap_1 {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&mt LCTRL Z>, <&kp LG(Z)>;
-                };
-                cut: tap_dance_mod_tap_2 {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp X>, <&kp LG(X)>;
-                };
                 l1s: tap_dance_mod_tap_3 {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
@@ -54,18 +42,6 @@
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
                 bindings = <&mt LS(NUMBER_7) DOT>, <&kp EXCL>;
-                };
-                minusds: tap_dance_6 { 
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp KP_MINUS>, <&kp KP_SLASH>;
-                };
-                plusds: tap_dance_7 {
-                compatible = "zmk,behavior-tap-dance";
-                #binding-cells = <0>;
-                tapping-term-ms = <200>;
-                bindings = <&kp KP_PLUS>, <&kp KP_MULTIPLY>;
                 };
                 cmdshft: tap_dance_8 {
                 compatible = "zmk,behavior-tap-dance";
@@ -88,8 +64,8 @@
                 lower_layer {
                         bindings = <
                         &kp LALT   &mt RG(PERIOD) NUMBER_7            &kp N8                      &kp N9                              &mt KP_EQUAL NUMBER_0      &kp BACKSLASH       &kp LEFT_BRACKET              &kp RIGHT_BRACKET           &kp PERCENT            &kp RG(C_AL_LOCK)
-                        &kp LSHFT  &mt RG(RS(RC(NUMBER_4))) NUMBER_4  &mt RG(RA(LEFT_BRACKET)) N5 &mt RG(RA(RIGHT_BRACKET)) NUMBER_6  &minusds                   &mt TILDE SQT       &mt AT_SIGN LEFT_PARENTHESIS  &mt HASH RIGHT_PARENTHESIS  &mt CARET AMPERSAND    &kp DOLLAR
-                        &kp LCTRL  &kp NUMBER_1                       &kp NUMBER_2                &kp NUMBER_3                        &plusds                    &kp UNDER           &kp LEFT_BRACE                &kp RIGHT_BRACE             &kp SEMICOLON          &kp LG(SPACE)
+                        &kp LSHFT  &mt RG(RS(RC(NUMBER_4))) NUMBER_4  &mt RG(RA(LEFT_BRACKET)) N5 &mt RG(RA(RIGHT_BRACKET)) NUMBER_6  &mt KP_SLASH KP_MINUS      &mt TILDE SQT       &mt AT_SIGN LEFT_PARENTHESIS  &mt HASH RIGHT_PARENTHESIS  &mt CARET AMPERSAND    &kp DOLLAR
+                        &kp LCTRL  &kp NUMBER_1                       &kp NUMBER_2                &kp NUMBER_3                        &mt KP_SLASH KP_PLUS       &kp UNDER           &kp LEFT_BRACE                &kp RIGHT_BRACE             &kp SEMICOLON          &kp LG(SPACE)
                                                                       &trans                      &trans                              &trans                     &trans              &trans                        &none
                         >;
                 };
