@@ -9,7 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-
+&mt {
+    flavor = "tap-preferred";
+};
 
 / {
         chosen {
@@ -21,9 +23,6 @@
                 label = "VBATT";
         };
         behaviors {
-                &mt {
-                flavor = "tap-preferred";
-                };
                 auto: tap_dance_mod_tap_0 {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
@@ -40,6 +39,7 @@
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
                 tapping-term-ms = <200>;
+                flavor = "tap-preferred";
                 bindings = <&mt LS(NUMBER_6) COMMA>, <&kp QUESTION>;
                 };
                 dotds: tap_dance_mod_tap_5 {
