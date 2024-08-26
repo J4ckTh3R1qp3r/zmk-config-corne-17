@@ -43,10 +43,10 @@
                 };
                 lower_layer {
                         bindings = <
-                        &kp LALT   &mt RG(PERIOD) NUMBER_7            &kp N8                      &kp N9                              &kp N0      &kp BACKSLASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET           &kp PERCENT            &kp RG(C_AL_LOCK)
-                        &kp LSHFT  &mt RG(RS(RC(NUMBER_4))) NUMBER_4  &mt RG(RA(LEFT_BRACKET)) N5 &mt RG(RA(RIGHT_BRACKET)) NUMBER_6  &kp MINUS   &mt TILDE SQT       &kp LEFT_PARENTHESIS  &mt HASH RIGHT_PARENTHESIS  &mt CARET AMPERSAND    &kp DOLLAR
-                        &kp LCTRL  &kp NUMBER_1                       &kp NUMBER_2                &kp NUMBER_3                        &kp EQUAL   &kp UNDER           &kp LEFT_BRACE        &kp RIGHT_BRACE             &kp SEMICOLON          &kp LG(SPACE)
-                                                                      &trans                      &trans                              &trans      &trans              &trans                &trans
+                        &kp LALT   &mt RG(PERIOD) NUMBER_7            &kp N8                       &kp N9                              &kp N0      &kp BACKSLASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET           &kp PERCENT            &kp RG(C_AL_LOCK)
+                        &kp LSHFT  &mt RG(RS(RC(NUMBER_4))) NUMBER_4  &mt RG(RA(LEFT_BRACKET)) N5  &mt RG(RA(RIGHT_BRACKET)) NUMBER_6  &kp MINUS   &mt TILDE SQT       &kp LEFT_PARENTHESIS  &mt HASH RIGHT_PARENTHESIS  &mt CARET AMPERSAND    &kp DOLLAR
+                        &kp LCTRL  &kp NUMBER_1                       &mt LS(LALT(&kp A)) NUMBER_2 &mt LS(&kp A) NUMBER_3              &kp EQUAL   &kp UNDER           &kp LEFT_BRACE        &kp RIGHT_BRACE             &kp SEMICOLON          &kp LG(SPACE)
+                                                                      &trans                       &trans                              &trans      &trans              &trans                &trans
                         >;
                 };
                 raise_layer {
