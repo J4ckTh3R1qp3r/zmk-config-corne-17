@@ -77,7 +77,7 @@
                 key-positions = <0 32>; //q and space
                 bindings = <&kp RG(RS(RC(NUMBER_4)))>;
                 };
-                combo_screen {
+                combo_fullscreen {
                 timeout-ms = <50>;
                 key-positions = <24 32>; //b and space
                 bindings = <&kp RG(PERIOD)>;
