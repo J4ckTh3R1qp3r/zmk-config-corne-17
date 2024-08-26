@@ -34,7 +34,7 @@
                 compatible = "zmk,combos";
                 combo_a_top {
                 timeout-ms = <50>;
-                key-positions = <2 17>;
+                key-positions = <2 32>;
                 bindings = <&kp LA(W)>;
                 };
         };
