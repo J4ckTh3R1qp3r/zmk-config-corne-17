@@ -35,7 +35,57 @@
                 combo_a_top {
                 timeout-ms = <50>;
                 key-positions = <2 32>;
-                bindings = <&kp LA(W)>;
+                bindings = <&kp LA(W)>; //e and space
+                };
+                combo_a_bot {
+                timeout-ms = <50>;
+                key-positions = <12 32>;
+                bindings = <&kp LA(S)>;  //d and space
+                };
+                combo_a_left {
+                timeout-ms = <50>;
+                key-positions = <11 32>;  //s and space
+                bindings = <&kp LA(A)>;
+                };
+                combo_a_right {
+                timeout-ms = <50>;
+                key-positions = <13 32>; //f and space
+                bindings = <&kp LA(D)>;
+                };
+                combo_a_v {
+                timeout-ms = <50>;
+                key-positions = <1 32>; //w and space
+                bindings = <&kp LA(V)>;
+                };
+                combo_a_h {
+                timeout-ms = <50>;
+                key-positions = <3 32>; //r and space
+                bindings = <&kp LA(H)>;
+                };
+                combo_a_front {
+                timeout-ms = <50>;
+                key-positions = <2 31>; //e and cmd
+                bindings = <&kp RG(RA(RIGHT_BRACKET))>;
+                };
+                combo_a_back {
+                timeout-ms = <50>;
+                key-positions = <12 31>; //d and cmd
+                bindings = <&kp RG(RA(LEFT_BRACKET))>;
+                };
+                combo_screen {
+                timeout-ms = <50>;
+                key-positions = <0 32>; //q and space
+                bindings = <&kp RG(RS(RC(NUMBER_4)))>;
+                };
+                combo_screen {
+                timeout-ms = <50>;
+                key-positions = <24 32>; //b and space
+                bindings = <&kp RG(PERIOD)>;
+                };
+                combo_autolayout {
+                timeout-ms = <50>;
+                key-positions = <14 32>; //g and space
+                bindings = <&kp LS(A)>;
                 };
         };
         keymap {
@@ -51,10 +101,10 @@
                 };
                 lower_layer {
                         bindings = <
-                        &kp LALT   &mt RG(PERIOD) NUMBER_7            &kp N8                       &kp N9                              &kp N0      &kp BACKSLASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET           &kp PERCENT            &kp RG(C_AL_LOCK)
-                        &kp LSHFT  &mt RG(RS(RC(NUMBER_4))) NUMBER_4  &mt RG(RA(LEFT_BRACKET)) N5  &mt RG(RA(RIGHT_BRACKET)) NUMBER_6  &kp MINUS   &mt TILDE SQT       &kp LEFT_PARENTHESIS  &mt HASH RIGHT_PARENTHESIS  &mt CARET AMPERSAND    &kp DOLLAR
-                        &kp LCTRL  &kp NUMBER_1                       &kp NUMBER_2                 &mt LS(A) NUMBER_3                  &kp EQUAL   &kp UNDER           &kp LEFT_BRACE        &kp RIGHT_BRACE             &kp SEMICOLON          &kp LG(SPACE)
-                                                                      &trans                       &trans                              &trans      &trans              &trans                &trans
+                        &kp LALT   &kp NUMBER_7  &kp N8         &kp N9         &kp N0      &kp BACKSLASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET           &kp PERCENT            &kp RG(C_AL_LOCK)
+                        &kp LSHFT  &kp NUMBER_4  &kp N5         &kp NUMBER_6   &kp MINUS   &mt TILDE SQT       &kp LEFT_PARENTHESIS  &mt HASH RIGHT_PARENTHESIS  &mt CARET AMPERSAND    &kp DOLLAR
+                        &kp LCTRL  &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp EQUAL   &kp UNDER           &kp LEFT_BRACE        &kp RIGHT_BRACE             &kp SEMICOLON          &kp LG(SPACE)
+                                                 &trans         &trans         &trans      &trans              &trans                &trans
                         >;
                 };
                 raise_layer {
