@@ -46,12 +46,12 @@
                 };
                 combo_a_v {
                 timeout-ms = <50>;
-                key-positions = <11 31>; //w and space
+                key-positions = <11 31>; //w and cmd
                 bindings = <&kp LA(V)>;
                 };
                 combo_a_h {
                 timeout-ms = <50>;
-                key-positions = <13 31>; //r and space
+                key-positions = <13 31>; //r and cmd
                 bindings = <&kp LA(H)>;
                 };
                 combo_a_front {
@@ -66,17 +66,17 @@
                 };
                 combo_screenshot {
                 timeout-ms = <50>;
-                key-positions = <0 30>; //q and space
+                key-positions = <0 31>; //q and space
                 bindings = <&kp RG(RS(RC(NUMBER_4)))>;
                 };
                 combo_fullscreen {
                 timeout-ms = <50>;
-                key-positions = <24 30>; //b and space
+                key-positions = <24 31>; //b and cmd
                 bindings = <&kp RG(PERIOD)>;
                 };
                 combo_autolayout {
                 timeout-ms = <50>;
-                key-positions = <14 30>; //g and space
+                key-positions = <14 31>; //g and cmd
                 bindings = <&kp LS(A)>;
                 };
         };
