@@ -66,7 +66,7 @@
                 };
                 combo_screenshot {
                 timeout-ms = <50>;
-                key-positions = <0 31>; //q and space
+                key-positions = <0 31>; //q and cmd
                 bindings = <&kp RG(RS(RC(NUMBER_4)))>;
                 };
                 combo_fullscreen {
