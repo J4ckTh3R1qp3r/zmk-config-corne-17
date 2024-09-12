@@ -76,7 +76,7 @@
                 };
                 combo_autolayout {
                 timeout-ms = <50>;
-                key-positions = <10 32>; //a and space
+                key-positions = <14 32>; //a and space
                 bindings = <&kp LS(A)>;
                 };
         };
