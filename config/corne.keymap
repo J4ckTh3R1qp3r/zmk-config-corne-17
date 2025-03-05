@@ -12,9 +12,9 @@
 &mt {
     flavor = "tap-preferred";
 };
-&soft_off {
-        hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
-};
+// &soft_off {
+//         hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+// };
 
 
 / {
@@ -115,7 +115,7 @@
                         bindings = <
                         &kp LALT    &kp TAB         &kp UP_ARROW    &none             &kp BACKSPACE   &kp C_MUTE         &kp C_VOLUME_DOWN &kp C_VOLUME_UP  &none   &kp BACKSPACE   
                         &kp LSHFT   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &kp ESCAPE      &kp C_PLAY_PAUSE   &kp C_PREV        &kp C_NEXT       &none   &sys_reset  
-                        &kp LCTRL   &studio_unlock          &ext_power EP_ON          &trans            &none           &none              &none             &ext_power EP_ON            &bt BT_CLR   &soft_off
+                        &kp LCTRL   &studio_unlock          &ext_power EP_ON          &trans            &none           &none              &none             &ext_power EP_ON            &bt BT_CLR   &none
                                                     &trans          &trans            &trans          &trans             &trans            &trans
                         >;
                 };
