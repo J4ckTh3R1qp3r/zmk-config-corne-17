@@ -12,7 +12,9 @@
 &mt {
     flavor = "tap-preferred";
 };
-
+&soft_off {
+        hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
+};
 
 
 / {
@@ -89,9 +91,6 @@
                 tapping-term-ms = <200>;
                 bindings = <&mo 1>, <&kp RET>;
                 };
-        };
-        &soft_off {
-                hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
         };
         keymap {
                 compatible = "zmk,keymap";
