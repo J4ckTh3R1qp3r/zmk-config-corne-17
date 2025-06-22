@@ -124,7 +124,7 @@
                         bindings = <
                         &kp LALT   &kp N7  &kp N8   &kp N9    &kp N0       &kp BACKSLASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET           &kp PERCENT            &kp RG(C_AL_LOCK)
                         &kp LSHFT  &kp N4  &kp N5   &kp N6    &kp MINUS    &mt TILDE SQT       &kp LEFT_PARENTHESIS  &mt HASH RIGHT_PARENTHESIS  &mt CARET AMPERSAND    &kp DOLLAR
-                        &kp LCTRL  &kp N1  &kp N2   &kp N3    &kp EQUAL    &kp UNDER           &kp LEFT_BRACE        &kp RIGHT_BRACE             &kp SEMICOLON          &kp LG(SPACE)
+                        &kp LCTRL  &kp N1  &kp N2   &kp N3    &kp EQUAL    &kp UNDER           &kp LEFT_BRACE        &kp RIGHT_BRACE             &kp SEMICOLON          &kp LC(SPACE)
                                            &trans   &trans    &trans       &trans              &trans                &trans
                         >;
                 };
