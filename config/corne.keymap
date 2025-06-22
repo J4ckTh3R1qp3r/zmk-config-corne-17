@@ -130,11 +130,7 @@
                 };
                 raise_layer {
                         bindings = <
-<<<<<<< HEAD
                         &kp LALT    &kp TAB         &kp UP_ARROW      &none             &kp BACKSPACE   &kp C_MUTE         &kp C_VOLUME_DOWN &kp C_VOLUME_UP  &none   &bt BT_CLR   
-=======
-                        &kp LALT    &kp TAB         &kp UP_ARROW      &none             &kp BACKSPACE   &kp C_MUTE         &kp C_VOLUME_DOWN &kp C_VOLUME_UP  &none   &kp BACKSPACE   
->>>>>>> 270de2bf0dd1e562193cb7bb3a7273292d5874d0
                         &kp LSHFT   &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW   &kp ESCAPE      &kp C_PLAY_PAUSE   &kp C_PREV        &kp C_NEXT       &none   &sys_reset  
                         &kp LCTRL   &studio_unlock  &ext_power EP_ON  &soft_off         &none           &none              &soft_off         &ext_power EP_ON &none   &none
                                                     &trans            &trans            &trans          &trans             &trans            &trans
