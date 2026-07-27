@@ -26,10 +26,15 @@
         };
         combos {
                 compatible = "zmk,combos";
-                combo_bt_next {
+                combo_bt_profile_1 {
                 timeout-ms = <50>;
                 key-positions = <2 3>; // e and r
-                bindings = <&bt BT_NXT>;
+                bindings = <&bt BT_SEL 0>;
+                };
+                combo_bt_profile_2 {
+                timeout-ms = <50>;
+                key-positions = <22 23>; // c and v
+                bindings = <&bt BT_SEL 1>;
                 };
                 combo_a_top {
                 timeout-ms = <50>;
