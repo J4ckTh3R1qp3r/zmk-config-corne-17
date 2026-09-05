@@ -1,0 +1,6 @@
+board:
+  name: holyiot_nrf52840_usb
+  full_name: HOLYIOT nRF52840 USB (MDK UF2)
+  vendor: holyiot
+  socs:
+    - name: nrf52840

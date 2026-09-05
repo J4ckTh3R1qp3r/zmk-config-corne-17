@@ -1,0 +1,56 @@
+/dts-v1/;
+
+#include <nordic/nrf52840_qiaa.dtsi>
+#include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
+
+/ {
+    model = "HOLYIOT nRF52840 USB with MDK UF2 bootloader";
+    compatible = "holyiot,nrf52840-usb";
+
+    chosen {
+        zephyr,sram = &sram0;
+        zephyr,flash = &flash0;
+        zephyr,code-partition = &slot0_partition;
+    };
+
+    /* The shared keymap expects this label; it is harmless on USB power. */
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
+};
+
+&flash0 {
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        /* MDK UF2 keeps the Nordic MBR at 0x0000 and the bootloader at 0xE0000. */
+        slot0_partition: partition@1000 {
+            label = "image-0";
+            reg = <0x00001000 0x000cb000>;
+        };
+
+        storage_partition: partition@cc000 {
+            label = "storage";
+            reg = <0x000cc000 0x00004000>;
+        };
+    };
+};
+
+&gpiote {
+    status = "okay";
+};
+
+&gpio0 {
+    status = "okay";
+};
+
+&gpio1 {
+    status = "okay";
+};
+
+zephyr_udc0: &usbd {
+    compatible = "nordic,nrf-usbd";
+    status = "okay";
+};

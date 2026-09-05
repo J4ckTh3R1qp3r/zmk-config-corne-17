@@ -26,6 +26,13 @@
         };
         combos {
                 compatible = "zmk,combos";
+                combo_bootloader_central {
+                timeout-ms = <100>;
+                require-prior-idle-ms = <1000>;
+                key-positions = <0 1 2 3 32>; // Q + W + E + R + Space
+                layers = <0>;
+                bindings = <&bootloader>;
+                };
                 combo_bt_profile_1 {
                 timeout-ms = <50>;
                 key-positions = <2 3>; // e and r

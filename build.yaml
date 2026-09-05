@@ -12,17 +12,36 @@
 #     shield: reviung41
 #
 # ---
-board: [ "nice_nano//zmk" ]
-shield: [ "corne_left", "corne_right", "settings_reset" ]
 include:
+  # Existing architecture. Flash corne_left_bootloader_test first to verify that
+  # Q+W+E+R+Space returns the current central (left half) to its UF2 bootloader.
   - board: nice_nano//zmk
     shield: corne_left
     snippet: studio-rpc-usb-uart
+    artifact-name: corne_left_bootloader_test
   - board: nice_nano//zmk
     shield: corne_right
+    artifact-name: corne_right_legacy
   - board: nice_nano//zmk
     shield: settings_reset
-    artifact-name: reset
+    artifact-name: settings_reset_nice_nano
+
+  # Dongle architecture: HOLYIOT is central; both Corne halves are peripherals.
+  - board: holyiot_nrf52840_usb/nrf52840
+    shield: corne_dongle
+    snippet: studio-rpc-usb-uart
+    artifact-name: corne_holyiot_dongle_central
+  - board: nice_nano//zmk
+    shield: corne_left
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: corne_left_peripheral
+  - board: nice_nano//zmk
+    shield: corne_right
+    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+    artifact-name: corne_right_peripheral
+  - board: holyiot_nrf52840_usb/nrf52840
+    shield: settings_reset
+    artifact-name: settings_reset_holyiot_dongle
 # name: Build ZMK firmware
 # on: [push, pull_request, workflow_dispatch]
 
