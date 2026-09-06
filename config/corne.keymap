@@ -36,72 +36,85 @@
                 combo_bt_profile_1 {
                 timeout-ms = <50>;
                 key-positions = <2 3>; // e and r
+                layers = <0>;
                 bindings = <&bt BT_SEL 0>;
                 };
                 combo_bt_profile_2 {
                 timeout-ms = <50>;
                 key-positions = <22 23>; // c and v
+                layers = <0>;
                 bindings = <&bt BT_SEL 1>;
                 };
                 combo_xbox_layer_toggle {
                 timeout-ms = <100>;
                 key-positions = <20 21 22 23 32>; // Z + X + C + V + Space
-                layers = <0 3>;
+                layers = <0>;
                 bindings = <&tog 3>;
                 };
                 combo_a_top {
                 timeout-ms = <50>;
                 key-positions = <2 32>;
+                layers = <0>;
                 bindings = <&kp LA(W)>; //e and space
                 };
                 combo_a_bot {
                 timeout-ms = <50>;
                 key-positions = <12 32>;
+                layers = <0>;
                 bindings = <&kp LA(S)>;  //d and space
                 };
                 combo_a_left {
                 timeout-ms = <50>;
                 key-positions = <11 32>;  //s and space
+                layers = <0>;
                 bindings = <&kp LA(A)>;
                 };
                 combo_a_right {
                 timeout-ms = <50>;
                 key-positions = <13 32>; //f and space
+                layers = <0>;
                 bindings = <&kp LA(D)>;
                 };
                 combo_a_v {
                 timeout-ms = <50>;
                 key-positions = <11 31>; //w and cmd
+                layers = <0>;
                 bindings = <&kp LA(V)>;
                 };
                 combo_a_h {
                 timeout-ms = <50>;
                 key-positions = <13 31>; //r and cmd
+                layers = <0>;
                 bindings = <&kp LA(H)>;
                 };
                 combo_a_front {
                 timeout-ms = <50>;
                 key-positions = <2 31>; //e and cmd
+                layers = <0>;
                 bindings = <&kp RG(RA(RIGHT_BRACKET))>;
                 };
                 combo_a_back {
                 timeout-ms = <50>;
                 key-positions = <12 31>; //d and cmd
+                layers = <0>;
                 bindings = <&kp RG(RA(LEFT_BRACKET))>;
                 };
                 combo_screenshot {
                 timeout-ms = <50>;
                 key-positions = <0 31>; //q and cmd
+                layers = <0>;
                 bindings = <&kp RG(RS(RC(NUMBER_4)))>;
                 };
                 combo_fullscreen {
                 timeout-ms = <50>;
                 key-positions = <24 31>; //b and cmd
+                layers = <0>;
                 bindings = <&kp RG(PERIOD)>;
                 };
                 combo_autolayout {
                 timeout-ms = <50>;
                 key-positions = <14 32>; //a and space
+                layers = <0>;
                 bindings = <&kp LS(A)>;
                 };
         };
@@ -146,7 +159,7 @@
                         &kp LALT       &kp Q     &kp W      &kp E      &kp R       &kp Y      &kp U      &kp I      &kp O      &kp P
                         &kp LSHFT      &kp A     &kp S      &kp D      &kp G       &kp H      &kp J      &kp K      &kp L      &kp SEMI
                         &kp LCTRL      &kp Z     &kp X      &kp C      &kp V       &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
-                                           &kp ESC     &kp LGUI   &kp SPACE   &kp RET    &kp LSHFT  &kp TAB
+                                           &kp ESC     &tog 3     &kp SPACE   &kp RET    &kp LSHFT  &kp TAB
                         >;
                 };
         };
