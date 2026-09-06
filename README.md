@@ -38,7 +38,7 @@ at `0x00001000`, settings at `0x000cc000`, and bootloader starting at
 The HOLYIOT board definition explicitly uses its built-in 32.768 kHz crystal.
 The dongle is configured for exactly three simultaneous BLE links (two split
 halves and at most one host), while retaining five host profiles. Its two split
-connections use a 7.5 ms interval with zero peripheral latency. The pinned ZMK
+connections use a 15 ms interval with zero peripheral latency. The pinned ZMK
 revision also includes the Zephyr controller fix for split-central prepare
 pipeline lockups.
 
