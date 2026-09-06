@@ -35,5 +35,28 @@ MDK/Adafruit-compatible UF2 bootloader: Nordic MBR at `0x00000000`, application
 at `0x00001000`, settings at `0x000cc000`, and bootloader starting at
 `0x000e0000`. Do not flash this image if the bootloader layout differs.
 
+The HOLYIOT board definition explicitly uses its built-in 32.768 kHz crystal.
+The dongle is configured for exactly three simultaneous BLE links (two split
+halves and at most one host), while retaining five host profiles. Its two split
+connections use a 15 ms interval with zero peripheral latency. The pinned ZMK
+revision also includes the Zephyr controller fix for split-central prepare
+pipeline lockups.
+
+## Test the corrected dongle image
+
+1. Enter the dongle UF2 bootloader with `Q + W + E + R + Space`. If the split
+   links are too unreliable for the combo, hold the dongle's boot button while
+   plugging it in.
+2. Copy only `corne_holyiot_dongle_central.uf2` to the UF2 volume. Do not flash
+   either half for this first test.
+3. Power-cycle the dongle and both halves. Existing bonds should be retained.
+4. Type continuously with both halves for at least two minutes, including fast
+   alternating left/right keys. Then switch either half off and on and confirm
+   that it reconnects and resumes typing.
+
+If a half does not reconnect, run the settings-reset images on all three
+devices once and repeat the migration sequence above. A reset is not needed
+merely to update this dongle image.
+
 The original `corne_left_bootloader_test`, `corne_right_legacy`, and
 `settings_reset_nice_nano` builds remain available as a rollback path.

@@ -12,10 +12,12 @@ config ZMK_SPLIT_ROLE_CENTRAL
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
 
-# Two split peripherals plus the five normal host profiles.
+# Only three links can exist at once: two split peripherals and one host.
+# Bonded host profiles are accounted for by BT_MAX_PAIRED, not BT_MAX_CONN.
 config BT_MAX_CONN
-    default 7
+    default 3
 
+# Two split bonds plus the five normal host profiles.
 config BT_MAX_PAIRED
     default 7
 

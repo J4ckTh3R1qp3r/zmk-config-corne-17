@@ -3,6 +3,11 @@ CONFIG_HW_STACK_PROTECTION=y
 CONFIG_GPIO=y
 CONFIG_ADC=y
 
+# HOLYIOT-18010 includes a 32.768 kHz crystal. Make the BLE sleep-clock
+# source explicit instead of depending on Zephyr's board-independent default.
+CONFIG_CLOCK_CONTROL_NRF_K32SRC_XTAL=y
+CONFIG_CLOCK_CONTROL_NRF_K32SRC_50PPM=y
+
 CONFIG_USE_DT_CODE_PARTITION=y
 CONFIG_BUILD_OUTPUT_UF2=y
 
